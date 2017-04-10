@@ -37,7 +37,7 @@ Because a true positive is typically accompanied by several positive detections,
 ![Screenshot](./output_images/bbox.png)
 
 ### 6- Video
-Here is a [link](https://youtu.be/R0ns2lJjJiY) to the video output
+Here is a [link](https://youtu.be/B4qtTuawp88) to the video output
 ``
 
 ## Discussion
