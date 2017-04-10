@@ -1,6 +1,6 @@
-#Udacity's Self-Driving Car Nanodegree Program
+# Udacity's Self-Driving Car Nanodegree Program
 
-##Project 5 - Vehicle Detection and Tracking
+## Project 5 - Vehicle Detection and Tracking
 The goal of this project is to detect and track vehicles in the scene as this is essential for self-driving cars
 
 ## Project steps
@@ -14,7 +14,6 @@ Plot the dataset of cars and non- cars.
 I used `skimage.hog()` to calulcate the HOG features for the image after reading it.
 I tried extracting the Hog features from 'RGB' color space.
 
-[image1]: ./output_images/Hog.png
 ![Screenshot](./output_images/Hog.png)
 
 ### 3- Feature extraction
@@ -26,11 +25,16 @@ Train an SVM linear classifier on the extracted features.
 ### 5- Sliding window
 Implement a sliding window that passes through the image, extract features from the window and use the classifier to classify if there is a car inside the window or not. I adapted the method find_cars for each window scale and the rectangles returned from each method call are aggregated. In previous implementations smaller (0.5) scales were explored but found to return too many false positives, and originally the window overlap was set to 50% in both X and Y directions, but an overlap of 75% in the Y direction (yet still 50% in the X direction) produced more redundant true positive detections, which were preferable given the heatmap strategy described below.
 
-[image2]: ./output_images/sliding_windows.png
+![Screenshot](./output_images/sliding_windows.png)
+
+![Screenshot](./output_images/squares.png)
+
 
 Because a true positive is typically accompanied by several positive detections, while false positives are typically accompanied by only one or two detections, a combined heatmap and threshold is used to differentiate the two. The add_heat function increments the pixel value (referred to as "heat") of an all-black image the size of the original image at the location of each detection rectangle. Areas encompassed by more overlapping rectangles are assigned higher levels of heat. The following image is the resulting heatmap from the detections in the image above:
 
-[image3]: ./output_images/heatmap.png
+![Screenshot](./output_images/heatmap.png)
+
+![Screenshot](./output_images/bbox.png)
 
 ### 6- Video
 Here is a [link](https://youtu.be/R0ns2lJjJiY) to the video output
