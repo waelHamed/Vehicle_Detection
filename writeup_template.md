@@ -15,6 +15,7 @@ I used `skimage.hog()` to calulcate the HOG features for the image after reading
 I tried extracting the Hog features from 'RGB' color space.
 
 [image1]: ./output_images/Hog.png
+![Screenshot](./output_images/Hog.png)
 
 ### 3- Feature extraction
 Next, in the section titled "Extract Features for Input Datasets and Combine, Define Labels Vector, Shuffle and Split¶" I define parameters for HOG feature extraction and extract features for the entire dataset.
